@@ -21,11 +21,11 @@ internal class Program
         builder.Services.Configure<KestrelServerOptions>(options =>
         {
             options.ListenLocalhost(5216); // Binding to http://localhost:5216
-            options.ListenLocalhost(5217, listenOptions =>
-            {
-                listenOptions.Protocols = HttpProtocols.Http2; // Optional: Enable HTTP/2 on port 5217
-                listenOptions.UseHttps(); // Optional: Enable HTTPS
-            });
+            // options.ListenLocalhost(5217, listenOptions =>
+            // {
+            //     listenOptions.Protocols = HttpProtocols.Http2; // Optional: Enable HTTP/2 on port 5217
+            //     listenOptions.UseHttps(); // Optional: Enable HTTPS
+            // });
         });
 
         // Set up logging
